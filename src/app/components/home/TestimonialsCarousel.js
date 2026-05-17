@@ -1,10 +1,9 @@
 
 "use client";
 import { useEffect, useState } from 'react';
-import { Inter } from 'next/font/google';
 import api from '@/lib/api';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = { className: '' };
 
 const TestimonialsSection = () => {
     const [testimonials, setTestimonials] = useState([]);

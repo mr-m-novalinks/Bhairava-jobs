@@ -1,13 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Noto_Sans_Tamil } from 'next/font/google';
 import categories from '@/lib/categories';
-
-const tamilFont = Noto_Sans_Tamil({
-	subsets: ['tamil'],
-	weight: ['400', '600'],
-	display: 'swap',
-});
 
 export default function Categrid() {
 	return (
@@ -32,7 +25,7 @@ export default function Categrid() {
 									sizes="(max-width: 768px) 50vw, 25vw"
 								/>
 							</div>
-							<p className={`mt-2 text-center text-xs sm:text-sm font-semibold text-slate-700 ${category.isTamil ? tamilFont.className : ''}`}>
+							<p className="mt-2 text-center text-xs sm:text-sm font-semibold text-slate-700">
 								{category.displayTitle ?? category.title}
 							</p>
 						</Link>
